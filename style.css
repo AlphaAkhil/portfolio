@@ -99,9 +99,14 @@ h1 {
 }
 
 .btn.secondary {
+  /* margin: auto; */
+  padding:10px;
   border: 2px solid #333;
   color: #333;
-  background: none;
+  text-decoration: none;
+  border-radius: 5px;
+  
+  /* background:#f7b733; */
 }
 
 .hero-image img {
@@ -202,7 +207,8 @@ h1 {
 .project-text p {
   color: #555;
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+
 }
 
 .project-text a {
