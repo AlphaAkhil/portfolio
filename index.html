@@ -3,112 +3,215 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nitin Pant | Portfolio</title>
+  <title>Nitin Pant | Game & XR Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="hero">
-    <div class="container">
-      <nav>
-        <h3 class="logo">Nitin Pant</h3>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contacts</a></li>
-        </ul>
+
+  <!-- Navigation -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#" class="logo">Spidy<span>.</span></a>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="navMenu">
+        <a href="#about" onclick="closeMenu()">ABOUT</a>
+        <a href="#skills" onclick="closeMenu()">SKILLS</a>
+        <a href="#projects" onclick="closeMenu()">PORTFOLIO</a>
+        <a href="#contact" class="nav-cta" onclick="closeMenu()">CONTACT</a>
       </nav>
-      <div class="hero-content">
-        <div class="hero-text">
-          <span class="tagline">ENTRY-LEVEL UNITY GAME DEVELOPER / 3D ARTIST</span>
-          <h1>Hello, my name is <br><strong>Nitin Pant</strong></h1>
-          <p>I’m a developer focused on creating clean and user-focused projects. I build mobile, web, and game experiences.</p>
-          <div class="buttons">
-            <a href="#projects" class="btn primary">Projects</a>
-            <a href="https://www.linkedin.com/in/nitin-pant-oo1" class="btn secondary">LinkedIn</a>
-          </div>
-        </div>
-        <div class="hero-image">
-          <img src="images/game.jpg" alt="Your image here"/>
-        </div>
-      </div>
     </div>
   </header>
 
-  <section class="skills" id="skills">
-    <div class="container">
-      <h2>Skills</h2>
-      <div class="skill-grid">
-        <div class="skill">Unity</div>
-        <div class="skill">C#</div>
-        <div class="skill">C/C++</div>
-        <div class="skill">Python</div>
-        <div class="skill">Blender</div>
-        <div class="skill">HTML & CSS</div>
-        <div class="skill">Java</div>
-        <div class="skill">Git & GitHub</div>
+  <main>
+    <!-- Hero Section -->
+    <section id="about" class="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="badge">XR / Game Developer</span>
+          <h1 class="hero-title">NITIN<br>PANT</h1>
+          <p class="hero-bio">
+            Developing high-performance <strong>XR</strong> simulations and <strong>Unity</strong> games through clean architecture, optimized <strong>C#</strong> code, and interactive system design.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn primary">Explore creations</a>
+            <a href="#skills" class="btn secondary">Technical Stack &rarr;</a>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <img src="images/game.jpg" alt="Nitin Pant" class="hero-image">
+        </div>
+      </div>
+    </section>
+
+    <!-- Focus / Capabilities Section -->
+    <section id="focus" class="focus-section">
+      <div class="container">
+        <span class="section-label">Core Specialization</span>
+        <h2 class="section-title">Engineering Focus</h2>
+
+        <div class="focus-grid">
+          <div class="focus-card">
+            <span class="focus-num">01 / Focus</span>
+            <h3>Game Systems & Architecture</h3>
+            <p>Designing clean, decoupled system loops inside structured programming environments, engineered for maximum performance and data throughput.</p>
+          </div>
+
+          <div class="focus-card">
+            <span class="focus-num">02 / Focus</span>
+            <h3>XR & Gameplay Systems</h3>
+            <p>Designing scalable gameplay mechanics, interactive XR experiences, and modular C# architectures that deliver smooth, immersive, and maintainable applications.</p>
+          </div>
+
+          <div class="focus-card">
+            <span class="focus-num">03 / Focus</span>
+            <h3>VR Simulation & Optimization</h3>
+            <p>Developing realistic VR training simulations, physics-based interactions, performance optimization, and responsive UX for standalone and PC VR platforms.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <span class="section-label">Capabilities</span>
+        <h2 class="section-title">Technical Skills</h2>
+        
+        <div class="skill-grid">
+          <div class="skill-pill">Unity</div>
+          <div class="skill-pill">C#</div>
+          <div class="skill-pill">C / C++</div>
+          <div class="skill-pill">Python</div>
+          <div class="skill-pill">Blender</div>
+          <div class="skill-pill">HTML & CSS</div>
+          <div class="skill-pill">Java</div>
+          <div class="skill-pill">Git & GitHub</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <span class="section-label">Selected Works</span>
+        <h2 class="section-title">Case Studies & Projects</h2>
+
+        <!-- Category Filters -->
+        <div class="filter-bar">
+          <button class="filter-btn active" onclick="filterProjects('all', this)">All Projects</button>
+          <button class="filter-btn" onclick="filterProjects('Virtual Reality', this)">Virtual Reality</button>
+          <button class="filter-btn" onclick="filterProjects('Mixed Reality', this)">Mixed Reality</button>
+          <button class="filter-btn" onclick="filterProjects('Game Dev', this)">Game Dev</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+          <!-- Dynamically generated via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <span class="section-label">Get in Touch</span>
+            <h2 class="contact-title">Let's craft something great.</h2>
+            <p class="contact-description">
+              Have an interactive architecture blueprint or systems performance profiling challenge? Drop your inquiries right here in the workspace frame.
+            </p>
+
+            <div class="direct-email-box">
+              <span class="email-label">Direct Message Address</span>
+              <a href="mailto:nitinpant14feb@gmail.com" class="email-link">
+                <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="16" x="2" y="4" rx="2"/>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+                nitinpant14feb@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Project Mission Description</label>
+              <textarea id="message" name="message" rows="5" placeholder="Briefly describe your project, technical stack, or VR simulation requirements..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn primary submit-btn">
+              Dispatch Message
+              <svg class="icon arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Two-Column Modal Overlay -->
+  <div id="projectModal" class="project-modal" onclick="closeModal(event)">
+    <div class="project-modal-content">
+      <button class="close-btn" onclick="closeModal(null, true)">&times;</button>
+      
+      <div class="modal-body">
+        <div class="iframe-container">
+          <iframe id="modalVideo" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+
+        <div class="modal-info">
+          <h2 id="modalTitle">Project Title</h2>
+          
+          <div class="modal-meta">
+            <span class="meta-item" id="modalRole">Lead Developer</span>
+            <span class="meta-item" id="modalDuration">6 Months</span>
+          </div>
+
+          <div class="tags-container" id="modalTags"></div>
+          <p class="modal-summary" id="modalSummary"></p>
+
+          <div class="tech-highlights">
+            <h3>Technical Highlights</h3>
+            <ul id="modalHighlights"></ul>
+          </div>
+
+          <div class="modal-actions">
+            <a id="modalGithub" href="#" target="_blank" rel="noopener" class="btn primary card-btn">View Code on GitHub</a>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section id="projects" class="projects">
-    <div class="container">
-      <h2>Projects</h2>
-
-      <div class="project-card">
-        <img src="images/3dRocketGame.png" alt="Project 1">
-        <div class="project-text">
-          <h3>Rocket Game 3D</h3>
-          <p>   In my 3D game, I created and imported low-poly models using Blender to build game elements like the rocket, platforms, and obstacles. These models were optimized for smooth performance in Unity. I scripted core mechanics in C#, including movement, rotation, physics-based thrust, collision detection, level transitions, and UI interactions. This project demonstrates my ability to combine custom 3D assets with interactive gameplay logic using Unity's 3D engine.</p>
-          <a href="https://alphaakhil.github.io/3DRocketGame/" class="btn secondary">View Project</a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <img src="images/todo.png" alt="Project 2">
-        <div class="project-text">
-          <h3>ToDo List Console Application</h3>
-          <p>The To-Do List Console App is a simple command-line application built using C#. It allows users to manage daily tasks through options like adding, removing, and clearing items from a list. I implemented this project to practice the fundamentals of C# programming, including collections (List<string>), loops, conditionals, and method structuring. The app displays a dynamic menu that updates in real-time as the user interacts with it, making it intuitive and user-friendly. This project helped me strengthen my understanding of console I/O and modular programming in C#.</p>
-          <a href="https://github.com/AlphaAkhil/TODO" class="btn secondary">View Project</a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <img src="images/chess.png" alt="Project 3">
-        <div class="project-text">
-          <h3>Chess Game</h3>
-          <p>The Chess Game is a 2D turn-based game developed using Python and Pygame, featuring a fully functional chessboard and standard chess rules. Players select and move pieces by clicking source and destination squares, with valid moves and turn order enforced programmatically. The board updates visually after each move, and the game includes basic logic for detecting check and checkmate conditions. This project helped me practice object-oriented programming in Python, implement grid-based movement, and apply core game development principles using Pygame. It serves as a foundational project demonstrating logic implementation, rule-based systems, and game loop control.</p>
-          <a href="#" class="btn secondary">View Project</a>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="images/archedGame.png" alt="Project 3">
-        <div class="project-text">
-          <h3>2D Spaceship Shooter Game</h3>
-          <p>The 2D Spaceship Shooter Game is a fast-paced arcade-style project developed using Python and Pygame. In the game, the player controls a spaceship that moves horizontally and shoots bullets to destroy incoming enemies falling from the top of the screen. I implemented key features such as sprite movement, bullet firing mechanics, enemy spawning, collision detection, scoring system, and game-over conditions. Graphics were handled using custom or open-source sprites, and sounds were added for shooting and explosions. This project helped me deepen my understanding of game loops, event handling, object-oriented programming, and real-time collision logic in Pygame.</p>
-          <a href="https://github.com/AlphaAkhil/SpaceShip_pygame" class="btn secondary">View Project</a>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="images/portfolio.png" alt="Project 3">
-        <div class="project-text">
-          <h3>Portfolio Website</h3>
-          <p>The Portfolio Website is a personal project built using HTML and CSS to showcase my work as a Unity Developer. It includes a home page, a project section with individual project pages, and clear navigation between them. While the design is currently optimized for desktop, it presents my projects in a structured, visually clean layout. I focused on using basic layout techniques like flexbox and consistent styling to ensure readability and visual flow. This project helped me strengthen my understanding of HTML structure, CSS styling, and organizing content for a developer-focused portfolio.</p>
-          <a href="https://github.com/AlphaAkhil/portfolio" class="btn secondary">View Project</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer id="contact">
-    <div class="container footer">
-      <div class="socials">
-        <a href="https://www.linkedin.com/in/nitin-pant-oo1"><img src="linkedin.svg" alt="LinkedIn"></a>
-        <a href="nitinpant14feb@gmail.com"><img src="icon-email.svg" alt="Email"></a>
-      </div>
-      <p>Nitin Pant © 2025</p>
+  <footer class="footer">
+    <div class="container footer-bottom">
+      <p>© 2026 Nitin Pant. Engineered for high-throughput performance.</p>
     </div>
   </footer>
 
+  <script src="main.js"></script>
 </body>
 </html>
