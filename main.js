@@ -1,4 +1,4 @@
-// Data-driven project array including XR Case Studies
+// Data-driven project array
 const projects = [
   {
     id: "pedestrian-crossing",
@@ -8,12 +8,12 @@ const projects = [
     image: "images/game.jpg",
     tagLine: "Unity / KAT VR / Eye Tracking",
     cardDescription: "An immersive XR training simulator designed to improve pedestrian road safety through realistic virtual environments and intelligent behavior analysis.",
-    videoUrl: "", 
-    githubUrl: "", // Empty: GitHub button automatically hidden
+    videoUrl: "https://youtu.be/Xq6ha7JVh3c", 
+    githubUrl: "https://github.com/AlphaAkhil/EyeTracking-Data-Prototype", // Empty: GitHub button automatically hidden
     role: "Lead Developer",
     duration: "6 Months",
-    tags: ["Unity", "KAT VR", "C#", "Eye Tracking", "SUMO"],
-    summary: "Integrated Eye Tracking and KAT VR locomotion to create a natural walking experience while monitoring user awareness and decision-making metrics in real time.",
+    tags: ["Unity","Foucs Vision", "KAT VR", "C#", "Eye Tracking", "SUMO"],
+    summary: "Developed a VR-based pedestrian crossing simulator to study how people perceive and respond to traffic situations in a controlled virtual environment. The system allows real participants to experience realistic pedestrian scenarios while their behavior is recorded for research and analysis.<br><br>The simulator combines KAT VR locomotion and VIVE Focus Vision eye tracking to capture natural walking movement, gaze direction, head movement, and interaction behavior. Traffic scenarios are synchronized with SUMO, allowing researchers to create repeatable conditions and compare how different participants observe, react, and make crossing decisions.<br><br>The collected data can help researchers understand pedestrian attention, awareness, reaction, and decision-making, providing measurable behavioral data without relying only on questionnaires or observations in real-world traffic.",
     highlights: [
       "Engineered real-time data collection pipelines for head rotation and eye-gaze metrics.",
       "Integrated KAT VR omnidirectional treadmill SDK for natural physical locomotion.",
@@ -23,13 +23,13 @@ const projects = [
   {
     id: "electronics-lab",
     title: "Electronics Learning Lab Simulator",
-    year: "2025",
+    year: "2026",
     category: "Mixed Reality",
     image: "images/game.jpg",
     tagLine: "Unity / Mixed Reality / C#",
     cardDescription: "An interactive Mixed Reality educational platform featuring 50+ learning modules that blend theoretical concepts with hands-on practical experiments.",
     videoUrl: "", 
-    githubUrl: "https://github.com/nitin-pant-oo1",
+    githubUrl: "",
     role: "XR Developer",
     duration: "4 Months",
     tags: ["Unity", "Mixed Reality", "C#", "Education"],
@@ -43,16 +43,16 @@ const projects = [
   {
     id: "rocket-3d",
     title: "Rocket Game 3D",
-    year: "2024",
+    year: "2026",
     category: "Game Dev",
     image: "images/3dRocketGame.png",
-    tagLine: "Unity 3D / C# / Blender",
+    tagLine: "Unity 3D / C# / Level Design",
     cardDescription: "Custom 3D low-poly models built in Blender and integrated into Unity. Features physics-based thrust, collision logic, and polished level flow.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    videoUrl: "",
     githubUrl: "https://alphaakhil.github.io/3DRocketGame/",
     role: "Lead Developer",
     duration: "4 Weeks",
-    tags: ["Unity 3D", "C#", "Blender", "Physics Engine"],
+    tags: ["Unity 3D", "C#", "Physics Engine"],
     summary: "A physics-based space traversal game featuring custom low-poly models, thrust/inertia calculations, and robust level state controllers.",
     highlights: [
       "Designed and modeled 3D assets in Blender with optimized poly counts.",
@@ -67,17 +67,44 @@ const projects = [
     category: "Game Dev",
     image: "images/archedGame.png",
     tagLine: "Python / Pygame",
-    cardDescription: "Fast-paced arcade shooter featuring custom sprite physics, dynamic enemy spawns, collision handling, and sound effect pipelines.",
+    cardDescription: "2D arcade shooter built from scratch in Python and Pygame, featuring AI combat, custom collision handling, projectile systems, real-time game loops, and gameplay audio.",
     videoUrl: "",
-    githubUrl: "",
+    githubUrl: "https://github.com/AlphaAkhil/SpaceShip_pygame",
     role: "Game Programmer",
     duration: "2 Weeks",
     tags: ["Python", "Pygame", "2D Physics", "OOP"],
-    summary: "An arcade-style shooter built from scratch in Python, demonstrating dynamic object spawning and collision pipelines.",
+    summary: "A 2D spaceship shooter built from scratch using Python and Pygame, focusing on fundamental game programming without relying on a full game engine.<br>The project implements core gameplay systems including player input, AI-controlled enemies, projectile handling, custom collision detection, health management, and real-time game-state logic.<br>An object-oriented structure was used to create reusable and manageable gameplay systems. The project also includes gameplay audio and supporting systems, providing hands-on experience in building a complete game loop from the ground up.",
     highlights: [
       "Built object-oriented sprite inheritance structures for weapons and enemies.",
       "Engineered high-performance bounding box collision detection routines.",
       "Integrated multi-channel audio synthesis for real-time sound effects."
+    ]
+  },
+  {
+    id: "vr-fastening-soldering-training",
+    title: "VR Fastening & Soldering Simulation Training",
+    year: "2026",
+    category: "Virtual Reality",
+    image: "images/game.jpg",
+    tagLine: "Unity / VR / Interactive Training",
+    cardDescription: "An interactive VR training simulator designed to teach and evaluate industrial fastening and soldering procedures through guided, hands-on virtual training.",
+    videoUrl: "https://youtu.be/B5xOu95BmMo",
+    githubUrl: "", // Empty if the project is proprietary
+    role: "Lead Developer",
+    duration: "YOUR_DURATION",
+    tags: [
+      "Unity",
+      "Virtual Reality",
+      "Training Simulation",
+      "Interactive Guidance"
+    ],
+    summary: "Developed an interactive VR-based training simulator for practicing industrial fastening and soldering procedures in a controlled virtual environment. The system guides trainees through a structured workflow, beginning with trainee login and safety PPE verification before progressing through the required assembly and soldering tasks.<br><br>The fastening workflow includes fixture placement, sequential fastening, squareness verification, and nut inspection to help trainees follow the correct assembly procedure. The soldering workflow guides users through the soldering operation followed by cleaning of the soldered area to complete the connection process.<br><br>The training system provides step-by-step audio instructions throughout the procedures, while video-based demonstrations are used for complex and critical tasks that require additional visual explanation. The simulation combines interactive VR equipment, procedural guidance, safety checks, and task-based training to provide an immersive hands-on learning experience.",
+    highlights: [
+      "Developed an interactive VR environment for hands-on fastening and soldering procedure training.",
+      "Implemented structured training workflows including PPE verification, fixture placement, sequential fastening, squareness checks, and nut inspection.",
+      "Integrated step-by-step audio instructions with video demonstrations for complex and critical training tasks.",
+      "Designed interactive soldering and post-soldering cleaning procedures within the VR environment.",
+      "Implemented trainee login and session data handling for tracking training activities."
     ]
   }
 ];
@@ -169,7 +196,7 @@ function openProjectModal(projectId) {
   document.getElementById("modalTitle").textContent = project.title;
   document.getElementById("modalRole").textContent = `Role: ${project.role}`;
   document.getElementById("modalDuration").textContent = `Timeline: ${project.duration}`;
-  document.getElementById("modalSummary").textContent = project.summary;
+  document.getElementById("modalSummary").innerHTML = project.summary;
 
   // GitHub link check & visibility logic in modal
   if (hasLink(project.githubUrl)) {
