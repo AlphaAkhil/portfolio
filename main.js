@@ -8,7 +8,7 @@ const projects = [
     image: "images/game.jpg",
     tagLine: "Unity / KAT VR / Eye Tracking",
     cardDescription: "An immersive XR training simulator designed to improve pedestrian road safety through realistic virtual environments and intelligent behavior analysis.",
-    videoUrl: "https://youtu.be/Xq6ha7JVh3c", 
+    videoUrl: "https://www.youtube.com/embed/Xq6ha7JVh3c", 
     githubUrl: "https://github.com/AlphaAkhil/EyeTracking-Data-Prototype", // Empty: GitHub button automatically hidden
     role: "Lead Developer",
     duration: "6 Months",
@@ -88,7 +88,7 @@ const projects = [
     image: "images/game.jpg",
     tagLine: "Unity / VR / Interactive Training",
     cardDescription: "An interactive VR training simulator designed to teach and evaluate industrial fastening and soldering procedures through guided, hands-on virtual training.",
-    videoUrl: "https://youtu.be/B5xOu95BmMo",
+    videoUrl: "https://www.youtube.com/embed/B5xOu95BmMo",
     githubUrl: "", // Empty if the project is proprietary
     role: "Lead Developer",
     duration: "YOUR_DURATION",
